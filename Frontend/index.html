@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealGo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.jpg" sizes="32x32" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <a href="index.html" class="logo">🍔 MealGo</a>
+
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Restaurants</a>
+        <a href="#menu-section">Menu</a>
+        <a href="#">Orders</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="search-bar">
+          <input type="text" placeholder="Search restaurants, food..." />
+          <img src="images/search-icon.png" class="search-icon" alt="search" />
+        </div>
+
+        <h1>Delicious Food Delivered Fast!!</h1>
+        <p>Order your favorite meals from the best restaurants near you.</p>
+
+        <a href="#menu-section">
+          <button>Order Now</button>
+        </a>
+      </div>
+
+      <!-- VIDEO / IFRAME SECTION -->
+      <div class="hero-video">
+        <video autoplay muted loop playsinline>
+          <source src="images/HeroVideo.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <!-- Menu Section-->
+
+    <section class="menu-section" id="menu-section">
+      <h2 class="section-title">🍽️ Popular Menu Items</h2>
+
+      <div class="menu-grid">
+        <!-- CARD 1 -->
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800"
+            alt="Burger"
+          />
+
+          <div class="menu-content">
+            <h3>Cheese Burger</h3>
+            <p class="desc">Juicy grilled burger with cheese & veggies</p>
+
+            <div class="bottom">
+              <span class="price">₹120</span>
+
+              <span class="badge available">Available</span>
+            </div>
+
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800"
+            alt="Pizza"
+          />
+
+          <div class="menu-content">
+            <h3>Veg Pizza</h3>
+            <p class="desc">Cheesy loaded veg pizza</p>
+
+            <div class="bottom">
+              <span class="price">₹250</span>
+
+              <span class="badge unavailable">Not Available</span>
+            </div>
+
+            <button class="btn disabled" disabled>Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="menu-card">
+          <img
+            src="https://img.freepik.com/premium-photo/chinese-food-noodle-table-web-banner-design_1235831-45388.jpg"
+            alt="Noodles"
+          />
+
+          <div class="menu-content">
+            <h3>Chicken Noodles</h3>
+            <p class="desc">Spicy street-style noodles</p>
+
+            <div class="bottom">
+              <span class="price">₹180</span>
+
+              <span class="badge available">Available</span>
+            </div>
+
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurants List -->
+    <section class="restaurant-section">
+      <h2 class="section-title">🍽️ Top Restaurants Near You</h2>
+
+      <div class="restaurant-grid">
+        <!-- CARD 1 -->
+        <div class="restaurant-card">
+          <img
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+            alt="Spice Hub"
+          />
+
+          <div class="restaurant-content">
+            <h3>Spice Hub</h3>
+            <p class="cuisine">🍛 Indian • North Indian</p>
+
+            <div class="info">
+              <span>⭐ 4.5</span>
+              <span>🚚 30 min</span>
+            </div>
+
+            <p class="address">MG Road, Bangalore</p>
+
+            <button>View Menu</button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="restaurant-card">
+          <img
+            src="https://images.unsplash.com/photo-1593504049359-74330189a345?w=800"
+            alt="Pizza Street"
+          />
+
+          <div class="restaurant-content">
+            <h3>Pizza Street</h3>
+            <p class="cuisine">🍕 Italian</p>
+
+            <div class="info">
+              <span>⭐ 4.2</span>
+              <span>🚚 25 min</span>
+            </div>
+
+            <p class="address">Indiranagar, Bangalore</p>
+
+            <button>View Menu</button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="restaurant-card">
+          <img
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800"
+            alt="Dragon Wok"
+          />
+
+          <div class="restaurant-content">
+            <h3>Dragon Wok</h3>
+            <p class="cuisine">🥡 Chinese</p>
+
+            <div class="info">
+              <span>⭐ 4.4</span>
+              <span>🚚 35 min</span>
+            </div>
+
+            <p class="address">Whitefield, Bangalore</p>
+
+            <button>View Menu</button>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="restaurant-card">
+          <img
+            src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800"
+            alt="Burger Point"
+          />
+
+          <div class="restaurant-content">
+            <h3>Burger Point</h3>
+            <p class="cuisine">🍔 Fast Food</p>
+
+            <div class="info">
+              <span>⭐ 4.1</span>
+              <span>🚚 20 min</span>
+            </div>
+
+            <p class="address">BTM Layout, Bangalore</p>
+
+            <button>View Menu</button>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="restaurant-card">
+          <img
+            src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=800"
+            alt="Tandoori House"
+          />
+
+          <div class="restaurant-content">
+            <h3>Tandoori House</h3>
+            <p class="cuisine">🔥 North Indian</p>
+
+            <div class="info">
+              <span>⭐ 4.6</span>
+              <span>🚚 40 min</span>
+            </div>
+
+            <p class="address">Koramangala, Bangalore</p>
+
+            <button>View Menu</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Image Sliding -->
+
+    <section class="about-images">
+      <div class="img-box box1"></div>
+      <div class="img-box box2"></div>
+      <div class="img-box box3"></div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Brand -->
+        <div class="footer-box">
+          <h2>🍔 MealGo</h2>
+          <p>
+            Delicious food delivered fast at your doorstep. Order from your
+            favorite restaurants anytime.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="#menu-section">Menu</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-box">
+          <h3>Contact</h3>
+          <p>📍 Bangalore, India</p>
+          <p>📞 +91 98765 43210</p>
+          <p>✉️ support@mealgo.com</p>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 MealGo. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
