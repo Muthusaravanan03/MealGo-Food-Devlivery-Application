@@ -139,146 +139,132 @@ body {
 .menu-section {
   background: #fff;
   color: #222;
-  padding: 60px 10%;
+  padding: 60px 8%;
   border-radius: 40px 40px 0 0;
   margin-top: -30px;
 }
 
 .section-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
+/* GRID FIX */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 
+/* CARD SIZE REDUCED */
 .menu-card {
   background: #fff;
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
 }
 
 .menu-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
+/* IMAGE SMALLER */
 .menu-card img {
   width: 100%;
-  height: 180px;
+  height: 140px;
   object-fit: cover;
 }
 
+/* CONTENT */
 .menu-content {
-  padding: 15px;
+  padding: 12px;
 }
 
 .menu-content h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
+  font-size: 16px;
+  margin-bottom: 4px;
 }
 
 .desc {
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
+/* PRICE + BADGE */
 .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .price {
   color: #e7180b;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .badge {
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 10px;
+  font-size: 10px;
+  padding: 3px 7px;
+  border-radius: 8px;
   font-weight: 600;
 }
 
-.available {
-  background: #e7f9ee;
-  color: #1a8f4c;
-}
-
-.unavailable {
-  background: #ffe7e7;
-  color: #d60000;
-}
-
+/* BUTTON */
 .btn {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   border: none;
   background: #e7180b;
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  transition: 0.3s;
+  font-size: 13px;
 }
 
-.btn:hover {
-  background: #c91409;
-}
-
-.btn.disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-/* ================= MOBILE ================= */
+/* ================= MOBILE (Swiggy-like) ================= */
 @media (max-width: 768px) {
-  .navbar {
-    margin: 10px;
-    padding: 15px;
+  .menu-section {
+    padding: 25px 12px;
   }
 
-  .nav-links {
-    display: none;
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* Swiggy style */
+    gap: 12px;
   }
 
-  .menu-icon {
-    display: block;
+  .menu-card img {
+    height: 110px;
   }
 
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    padding: 20px;
+  .menu-content {
+    padding: 10px;
   }
 
-  .hero-content h1 {
-    font-size: 28px;
-  }
-
-  .hero-content p {
+  .menu-content h3 {
     font-size: 14px;
   }
 
-  .hero-img {
-    width: 220px;
-    max-width: 80%;
-    margin-top: 20px;
+  .desc {
+    font-size: 11px;
   }
 
-  .menu-section {
-    padding: 40px 20px;
-    border-radius: 30px 30px 0 0;
+  .btn {
+    padding: 7px;
+    font-size: 12px;
+  }
+}
+
+/* very small phones */
+@media (max-width: 420px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -287,7 +273,7 @@ body {
 .restaurant-section {
   background: #fff;
   color: #222;
-  padding: 60px 10%;
+  padding: 60px 8%;
   border-radius: 40px 40px 0 0;
   margin-top: 40px;
 }
@@ -295,108 +281,132 @@ body {
 /* TITLE */
 .restaurant-section .section-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
-  margin-bottom: 35px;
-  color: #222;
+  margin-bottom: 30px;
 }
 
-/* GRID */
+/* GRID (smaller cards like Swiggy) */
 .restaurant-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 
-/* CARD */
+/* CARD (reduced size) */
 .restaurant-card {
   background: #fff;
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
-  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
 }
 
 .restaurant-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* IMAGE */
+/* IMAGE SMALLER */
 .restaurant-card img {
   width: 100%;
-  height: 180px;
+  height: 140px;
   object-fit: cover;
 }
 
 /* CONTENT */
 .restaurant-content {
-  padding: 15px;
+  padding: 12px;
 }
 
 /* NAME */
 .restaurant-content h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 5px;
-  color: #111;
+  margin-bottom: 4px;
 }
 
 /* CUISINE */
 .cuisine {
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-/* INFO ROW (rating + time) */
+/* INFO ROW */
 .info {
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #444;
 }
 
 /* ADDRESS */
 .address {
-  font-size: 12px;
+  font-size: 11px;
   color: #777;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 /* BUTTON */
 .restaurant-content button {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #e7180b;
   color: white;
   font-weight: 600;
+  font-size: 13px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.restaurant-content button:hover {
-  background: #c91409;
-  transform: scale(1.02);
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .restaurant-section {
-    padding: 40px 20px;
-    border-radius: 30px 30px 0 0;
+    padding: 25px 12px;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr); /* Swiggy style */
+    gap: 12px;
   }
 
   .restaurant-card img {
-    height: 160px;
+    height: 110px;
+  }
+
+  .restaurant-content {
+    padding: 10px;
+  }
+
+  .restaurant-content h3 {
+    font-size: 14px;
+  }
+
+  .cuisine,
+  .address {
+    font-size: 10px;
+  }
+
+  .info {
+    font-size: 11px;
+  }
+
+  .restaurant-content button {
+    font-size: 12px;
+    padding: 7px;
   }
 }
 
-/* ================= 3 IMAGE AUTO CAROUSEL ================= */
+/* very small phones */
+@media (max-width: 420px) {
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ================= 3 FIXED IMAGE SECTIONS ================= */
 
