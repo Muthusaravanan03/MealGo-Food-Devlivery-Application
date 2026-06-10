@@ -156,7 +156,7 @@ body {
 }
 
 /* ================= BUTTON ================= */
-.auth-box button {
+.auth-box form button {
   width: 100%;
   padding: 13px;
 
@@ -171,6 +171,11 @@ body {
 
   cursor: pointer;
   transition: 0.3s;
+}
+
+.auth-box form button:hover {
+  background: #c91409;
+  transform: translateY(-2px);
 }
 
 .auth-box button:hover {
@@ -310,4 +315,81 @@ body {
     text-align: center;
     padding: 0 20px 30px;
   }
+}
+
+/* ================= GOOGLE LOGIN ================= */
+
+.social-login {
+  margin-bottom: 20px;
+}
+
+.google-btn {
+  width: 60%;
+  padding: 6px 8px;
+  margin-left: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+
+  background: #ffffff;
+  color: #111111;
+
+  border: 2px solid #363636;
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.google-btn:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.google-btn:active {
+  transform: translateY(0);
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 22px 0;
+
+  color: #666666;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d1d1d1;
+}
+
+.divider span {
+  padding: 0 16px;
+  background: #ffffff;
 }
