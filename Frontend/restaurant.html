@@ -3,228 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MealGo</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>MealGo | Restaurants</title>
+
+    <link rel="stylesheet" href="restaurant.css" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="images/logo.jpg" sizes="32x32" />
   </head>
+
   <body>
-    <!-- Navbar -->
+    <!-- ================= NAVBAR ================= -->
     <header class="navbar">
       <a href="index.html" class="logo">🍔 MealGo</a>
 
       <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
       <nav class="nav-links">
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="restaurant.html">Restaurants</a>
-        <a href="#menu-section">Menu</a>
+        <a href="#">Menu</a>
         <a href="#">Orders</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
       </nav>
     </header>
 
-    <section class="hero">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="restaurant-hero">
       <div class="hero-content">
-        <div class="search-bar">
-          <input type="text" placeholder="Search restaurants, food..." />
-          <img src="images/search-icon.png" class="search-icon" alt="search" />
-        </div>
+        <h1>Discover Great Food Near You !!</h1>
 
-        <h1>Delicious Food Delivered Fast!!</h1>
-        <p>Order your favorite meals from the best restaurants near you.</p>
+        <p>
+          Search from hundreds of restaurants and enjoy your favorite meals
+          delivered fast.
+        </p>
 
-        <a href="#menu-section">
-          <button>Order Now</button>
-        </a>
-      </div>
-
-      <!-- VIDEO / IFRAME SECTION -->
-      <div class="hero-video">
-        <video autoplay muted loop playsinline>
-          <source src="images/HeroVideo.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </section>
-
-    <!-- Menu Section-->
-
-    <section class="menu-section" id="menu-section">
-      <h2 class="section-title">🍽️ Popular Menu Items</h2>
-
-      <div class="menu-grid">
-        <!-- CARD 1 -->
-        <div class="menu-card">
-          <img
-            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800"
-            alt="Burger"
-          />
-
-          <div class="menu-content">
-            <h3>Cheese Burger</h3>
-            <p class="desc">Juicy grilled burger with cheese & veggies</p>
-
-            <div class="bottom">
-              <span class="price">₹120</span>
-
-              <span class="badge available">Available</span>
-            </div>
-
-            <button class="btn">Add to Cart</button>
+        <!-- Restaurant Search -->
+        <div class="search-wrapper">
+          <!-- Restaurant Search -->
+          <div class="search-bar restaurant-search">
+            <input type="text" placeholder="Search restaurants, food..." />
+            <img
+              src="images/search-icon.png"
+              class="search-icon"
+              alt="search"
+            />
           </div>
-        </div>
 
-        <!-- CARD 2 -->
-        <div class="menu-card">
-          <img
-            src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800"
-            alt="Pizza"
-          />
+          <!-- Location Search -->
+          <div class="location-bar">
+            <img
+              src="images/location-icon.png"
+              class="location-icon"
+              alt="location"
+            />
 
-          <div class="menu-content">
-            <h3>Veg Pizza</h3>
-            <p class="desc">Cheesy loaded veg pizza</p>
-
-            <div class="bottom">
-              <span class="price">₹250</span>
-
-              <span class="badge unavailable">Not Available</span>
-            </div>
-
-            <button class="btn disabled" disabled>Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="menu-card">
-          <img
-            src="https://img.freepik.com/premium-photo/chinese-food-noodle-table-web-banner-design_1235831-45388.jpg"
-            alt="Noodles"
-          />
-
-          <div class="menu-content">
-            <h3>Chicken Noodles</h3>
-            <p class="desc">Spicy street-style noodles</p>
-
-            <div class="bottom">
-              <span class="price">₹180</span>
-
-              <span class="badge available">Available</span>
-            </div>
-
-            <button class="btn">Add to Cart</button>
-          </div>
-        </div>
-        <!-- CARD 4 -->
-        <div class="menu-card">
-          <img
-            src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=800"
-            alt="Fried Rice"
-          />
-
-          <div class="menu-content">
-            <h3>Egg Fried Rice</h3>
-            <p class="desc">Hot and spicy street-style fried rice</p>
-
-            <div class="bottom">
-              <span class="price">₹150</span>
-              <span class="badge available">Available</span>
-            </div>
-
-            <button class="btn">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- CARD 5 -->
-        <div class="menu-card">
-          <img
-            src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800"
-            alt="Chicken Biryani"
-          />
-
-          <div class="menu-content">
-            <h3>Chicken Biryani</h3>
-            <p class="desc">Aromatic basmati rice with spicy chicken</p>
-
-            <div class="bottom">
-              <span class="price">₹220</span>
-              <span class="badge available">Available</span>
-            </div>
-
-            <button class="btn">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- CARD 6 -->
-        <div class="menu-card">
-          <img
-            src="https://static.vecteezy.com/system/resources/thumbnails/040/707/928/small/ai-generated-grilled-meat-sandwich-on-toasted-ciabatta-with-fresh-salad-generated-by-ai-photo.jpg"
-            alt="Sandwich"
-          />
-
-          <div class="menu-content">
-            <h3>Grilled Sandwich</h3>
-            <p class="desc">Toasted sandwich with cheese & veggies</p>
-
-            <div class="bottom">
-              <span class="price">₹90</span>
-              <span class="badge available">Available</span>
-            </div>
-
-            <button class="btn">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- CARD 7 -->
-        <div class="menu-card">
-          <img
-            src="https://img.magnific.com/free-photo/plate-fettuccine-alfredo-with-fresh-parsley_9975-124881.jpg?semt=ais_hybrid&w=740&q=80"
-            alt="Pasta"
-          />
-
-          <div class="menu-content">
-            <h3>White Sauce Pasta</h3>
-            <p class="desc">Creamy Italian-style pasta</p>
-
-            <div class="bottom">
-              <span class="price">₹200</span>
-              <span class="badge unavailable">Not Available</span>
-            </div>
-
-            <button class="btn disabled" disabled>Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- CARD 8 -->
-        <div class="menu-card">
-          <img
-            src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800"
-            alt="Chicken Burger"
-          />
-
-          <div class="menu-content">
-            <h3>Chicken Burger</h3>
-            <p class="desc">Crispy chicken with fresh lettuce</p>
-
-            <div class="bottom">
-              <span class="price">₹140</span>
-              <span class="badge available">Available</span>
-            </div>
-
-            <button class="btn">Add to Cart</button>
+            <input type="text" placeholder="Enter location" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Restaurants List -->
+    <!-- ================= RESTAURANTS SECTION ================= -->
     <section class="restaurant-section" id="restaurant-section">
       <h2 class="section-title">🍽️ Top Restaurants Near You</h2>
 
@@ -338,6 +180,7 @@
             <button>View Menu</button>
           </div>
         </div>
+
         <!-- CARD 6 -->
         <div class="restaurant-card">
           <img
@@ -450,18 +293,9 @@
       </div>
     </section>
 
-    <!--  Image Sliding -->
-
-    <section class="about-images">
-      <div class="img-box box1"></div>
-      <div class="img-box box2"></div>
-      <div class="img-box box3"></div>
-    </section>
-
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
       <div class="footer-container">
-        <!-- Brand -->
         <div class="footer-box">
           <h2>🍔 MealGo</h2>
           <p>
@@ -470,17 +304,15 @@
           </p>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-box">
           <h3>Quick Links</h3>
           <a href="index.html">Home</a>
-          <a href="#menu-section">Menu</a>
-          <a href="restaurants.html">Restaurants</a>
+          <a href="#">Menu</a>
+          <a href="restaurant.html">Restaurants</a>
           <a href="login.html">Login</a>
           <a href="signup.html">Sign Up</a>
         </div>
 
-        <!-- Contact -->
         <div class="footer-box">
           <h3>Contact</h3>
           <p>📍 Bangalore, India</p>
@@ -488,7 +320,6 @@
           <p>✉️ support@mealgo.com</p>
         </div>
 
-        <!-- Social -->
         <div class="footer-box">
           <h3>Follow Us</h3>
           <a href="#">Instagram</a>
@@ -501,5 +332,11 @@
         <p>© 2026 MealGo. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>

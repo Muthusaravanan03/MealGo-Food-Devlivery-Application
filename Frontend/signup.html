@@ -25,30 +25,52 @@
     </header>
 
     <!-- SIGNUP -->
+    <!-- SIGNUP -->
     <div class="auth-container">
-      <div class="auth-box">
-        <h2>Create Account</h2>
-        <p>Join MealGo and order your favorite meals 🍔</p>
+      <div class="auth-card">
+        <!-- LEFT SIDE FORM -->
+        <div class="auth-box">
+          <h2>Create Account</h2>
+          <p>Join MealGo and order your favorite meals 🍔</p>
 
-        <!-- ✅ FIXED FORM -->
-        <form action="signup" method="post">
+          <form action="signup" method="post">
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            />
 
-          <input type="text" name="username" placeholder="Username" required />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
 
-          <input type="password" name="password" placeholder="Password" required />
+            <input type="email" name="email" placeholder="Email" required />
 
-          <input type="email" name="email" placeholder="Email" required />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
 
-          <input type="tel" name="phone" placeholder="Phone Number" required />
+            <textarea name="address" placeholder="Address" required></textarea>
 
-          <textarea name="address" placeholder="Address" required></textarea>
+            <button type="submit">Sign Up</button>
+          </form>
 
-          <button type="submit">Sign Up</button>
-        </form>
+          <div class="auth-link">
+            <h4 style="color: black">Already have an account?</h4>
+            <a href="login.html">Login</a>
+          </div>
+        </div>
 
-        <div class="auth-link">
-         <h4 style="color: black;"> Already have an account?</h4>
-          <a href="login.html">Login</a>
+        <!-- RIGHT SIDE IMAGE -->
+        <div class="auth-image">
+          <img src="images/signup-image.jpg" alt="MealGo Signup" />
         </div>
       </div>
     </div>
@@ -56,7 +78,6 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
-
         <div class="footer-box">
           <h2>🍔 MealGo</h2>
           <p>
@@ -87,7 +108,6 @@
           <a href="#">Facebook</a>
           <a href="#">Twitter</a>
         </div>
-
       </div>
 
       <div class="footer-bottom">
